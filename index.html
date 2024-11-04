@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Travel Experience Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Travel Experience Form</h1>
+    <p id="description">We'd love to hear about your recent travel experience! Please take a moment to fill out this short survey.</p>
+    <form id="survey-form">
+      <label class="padded-input" id="name-label" for="name">Name<input class="input-box" id="name" name="name" type="text" placeholder="Enter your name" required /></label>
+      <label class="padded-input" id="email-label" for="email">Email<input class="input-box" id="email" name="email" type="email" placeholder="Enter your email" required /></label>
+      <label class="padded-input" id="number-label" for="age">
+        Age
+        <span>(optional)</span>
+        <input class="input-box" id="number" name="age" type="number" min="14" max="110" placeholder="Age" />
+      </label>
+      <label class="padded-input" for="destination">Where did you travel to?<input class="input-box" id="destination" type="text" name="destination" placeholder="City, Country (e.g., Tokyo, Japan)" required /></label>
+      <fieldset>
+        <label for="travel-duration">
+          How long was your stay?
+          <select class="dropdown" name="travel-duration" required >
+            <option disabled="" selected=""  value="">(select one option)</option>
+            <option value="1">Less than 1 week</option>
+            <option value="2">1-2 weeks</option>
+            <option value="3">3-4 weeks</option>
+            <option value="4">Over 1 month</option>
+          </select>
+        </label>
+        <label class="padded-input" for="travel-date">When did your trip begin?<input class="input-box" id="travel-date" type="date" name="travel-date" required /></label>
+      </fieldset>
+      <fieldset>
+        <label for="travel-experience">
+          How would you rate your overall travel experience?
+          <select class="dropdown" name="travel-experience" required >
+            <option disabled="" selected=""  value="">(select one option)</option>
+            <option value="1">Very Poor</option>
+            <option value="2">Poor</option>
+            <option value="3">Average</option>
+            <option value="4">Good</option>
+            <option value="5">Excellent</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset class="checkbox-radio">
+        <legend>What factors influenced your rating? <span>(Select all that apply.)</span></legend>
+        <label><input class="inline" value="accommodation-quality" type="checkbox">Accommodation quality</label>
+        <label><input class="inline" value="transportation-convenience" type="checkbox">Transportation convenience</label>
+        <label><input class="inline" value="local-attractions-and-activities" type="checkbox">Local attractions and activities</label>
+        <label><input class="inline" value="food-and-dining-experience" type="checkbox">Food and dining experience</label>
+        <label><input class="inline" value="safety-and-security" type="checkbox">Safety and security</label>
+        <label><input class="inline" value="cleanliness-of-the-destination" type="checkbox">Cleanliness of the destination</label>
+        <label><input class="inline" value="cultural-or-historical-significance" type="checkbox">Cultural or historical significance</label>
+        <label><input class="inline" value="weather-conditions" type="checkbox">Weather conditions</label>
+      </fieldset>
+      <fieldset class="checkbox-radio">
+        <legend>Would you recommend this destination to others?</legend>
+        <label for="recommend-yes"><input class="inline" type="radio" name="recommend" id="recommend-yes" value="yes" checked/>Yes</label>
+        <label for="recommend-no"><input class="inline" type="radio" name="recommend" id="recommend-no" value="no" />No</label>
+      </fieldset>
+      <label class="padded-input" id="comments-label" for="comments">Any other comments?
+        <textarea id="comments" name="comments" rows="5" placeholder="We'd love to hear any additional thoughts you have!"></textarea>
+      </label>
+      <input id="submit" type="submit" value="Submit"/>
+    </form>
+  </body>
+</html>
